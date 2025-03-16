@@ -1,0 +1,15 @@
+
+.modal-content {
+  border-radius: 15px;
+  box-shadow: 0 2px 10px rgba(171, 171, 171, 0.7);
+  animation: popupFadeIn 0.3s ease-out;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

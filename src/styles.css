@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #8012f9;
+  --secondary: #F1F1F1;
+}
+
+.bg-primary {
+  background-color: var(--primary) !important;
+}
+
+.portfolio-btn{
+  background-color: var(--primary) !important;
+  color: white !important;
+}

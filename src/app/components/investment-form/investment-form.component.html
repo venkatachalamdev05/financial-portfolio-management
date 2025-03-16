@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="pt-3">
+    <h3>Investment Details</h3>
+  </div>
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="investmentForm" (ngSubmit)="openConfirmDialog()">
+        <div class="form-group py-2">
+          <label for="assetType">Asset Type</label>
+          <input id="assetType" formControlName="assetType" class="form-control" placeholder="Enter asset type">
+          <div *ngIf="assetType?.invalid && assetType?.touched" class="text-danger">
+            <div *ngIf="assetType?.errors?.['required']">Asset Type is required.</div>
+          </div>
+        </div>
+
+        <div class="form-group py-2">
+          <label for="quantity">Quantity</label>
+          <input id="quantity" type="number" formControlName="quantity" class="form-control" placeholder="Enter quantity">
+          <div *ngIf="quantity?.invalid && quantity?.touched" class="text-danger">
+            <div *ngIf="quantity?.errors?.['required']">Quantity is required.</div>
+            <div *ngIf="quantity?.errors?.['min']">Quantity must be at least 1.</div>
+            <div *ngIf="quantity?.errors?.['pattern']">Quantity must be a valid number.</div>
+          </div>
+        </div>
+
+        <div class="form-group py-2">
+          <label for="purchasePrice">Purchase Price</label>
+          <input id="purchasePrice" type="number" formControlName="purchasePrice" class="form-control" placeholder="Enter purchase price">
+          <div *ngIf="purchasePrice?.invalid && purchasePrice?.touched" class="text-danger">
+            <div *ngIf="purchasePrice?.errors?.['required']">Purchase Price is required.</div>
+            <div *ngIf="purchasePrice?.errors?.['min']">Purchase Price must be at least 1.</div>
+            <div *ngIf="purchasePrice?.errors?.['max']">Purchase Price cannot exceed 1,000,000.</div>
+            <div *ngIf="purchasePrice?.errors?.['pattern']">Purchase Price must be a valid number.</div>
+          </div>
+        </div>
+
+        <div class="form-group py-2">
+          <label for="date">Date</label>
+          <input id="date" type="date" formControlName="date" class="form-control">
+          <div *ngIf="date?.invalid && date?.touched" class="text-danger">
+            <div *ngIf="date?.errors?.['required']">Date is required.</div>
+            <div *ngIf="date?.errors?.['futureDate']">Date cannot be in the future.</div>
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="investmentForm.invalid" class="btn portfolio-btn my-3"  data-bs-toggle="modal" data-bs-target="#confirmModal">Submit</button>
+        <button class="btn portfolio-btn my-3 ms-1" (click)="investmentForm.reset()">Reset</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<app-confirmation-popup
+  *ngIf="showModal"
+  [investmentForm]="investmentForm"
+  (close)="showModal = false"
+  (confirm)="confirmSubmit()">
+</app-confirmation-popup>

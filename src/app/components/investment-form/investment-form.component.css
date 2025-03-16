@@ -1,0 +1,10 @@
+mat-card {
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(83, 83, 83, 0.1);
+}
+
+.modal.show {
+  display: block;
+  opacity: 1;
+}

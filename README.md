@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 
+## Install the required dependencies:
+
+Run `npm install`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -25,3 +29,31 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Folder Structure
+
+* Component folder contains the main components like DashboardComponent, InvestmentFormComponent, and ConfirmationPopupComponent,
+
+* Services folder contains services like FacadeService that handle data fetching and transformation,
+
+* State folder contains contains NgRx Store to add and fetch the data.
+
+## Validations
+
+* Added form validations to ensure correct input for asset type, quantity, purchase price, and date
+
+* Included validation checks to make sure all required fields are filled and the values are correct before submission
+
+* Incorporated error messages to guide users in case of invalid input
+
+
+## Note on Task Description
+
+Please note that due to some ambiguity in the description of the task, I have built the application based on how I understood the requirements. If there are any specific expectations or changes, I would be happy to revise the implementation accordingly.
+
+
+
+
+
+

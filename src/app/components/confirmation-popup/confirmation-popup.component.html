@@ -1,0 +1,21 @@
+<div class="modal fade show" tabindex="-1" role="dialog" style="display: block;" aria-modal="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Confirm Your Investment</h5>
+        <button type="button" class="btn-close" (click)="closePopup()"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Asset Type:</strong> {{ investmentForm.value.assetType }}</p>
+        <p><strong>Quantity:</strong> {{ investmentForm.value.quantity }}</p>
+        <p><strong>Purchase Price:</strong> {{ investmentForm.value.purchasePrice }}</p>
+        <p><strong>Date:</strong> {{ investmentForm.value.date | date:'dd-MMM-yyyy' }}</p>
+        <p>Do you want to save the investment details?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closePopup()">Cancel</button>
+        <button type="button" class="btn portfolio-btn" (click)="confirmSubmit()">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
