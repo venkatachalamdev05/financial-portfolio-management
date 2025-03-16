@@ -1,4 +1,3 @@
-// src/app/state/investment.selectors.ts
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import { InvestmentState } from './portfolio.state';
 

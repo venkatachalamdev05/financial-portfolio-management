@@ -1,4 +1,3 @@
-// src/app/state/investment.reducer.ts
 import { createReducer, on } from '@ngrx/store';
 import { addInvestment } from './portfolio.actions';
 import { initialState } from './portfolio.state';

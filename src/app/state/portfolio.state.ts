@@ -1,4 +1,3 @@
-// src/app/state/app.state.ts
 export interface Investment {
   assetType: string;
   quantity: number;
