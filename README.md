@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
 
+## Setup Instructions
+
+1. Clone or unzip the project folder.
+2. Navigate to the project directory and run `npm install` to install dependencies.
+3. Once installed, run `ng serve` to start the development server.
+
+
 ## Install the required dependencies:
 
 Run `npm install`
