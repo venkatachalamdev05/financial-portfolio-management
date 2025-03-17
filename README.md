@@ -60,6 +60,11 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Please note that due to some ambiguity in the description of the task, I have built the application based on how I understood the requirements. If there are any specific expectations or changes, I would be happy to revise the implementation accordingly.
 
 
+## Facade Service Usage
+
+The application implements a FacadeService to simplify data flow between components and state management. This service acts as an intermediary layer, promoting cleaner and more maintainable code by reducing direct dependencies between components and NgRx store.
+
+
 
 
 
